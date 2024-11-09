@@ -1,0 +1,85 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa; /* Light background color */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff; /* White background for the content area */
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+}
+
+input[type="text"], input[type="datetime-local"] {
+    width: 80%;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 18%;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.completed {
+    background-color: #d4edda;
+    color: #155724;
+    text-decoration: line-through;
+}
+
+.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.deleted {
+    background-color: #f8d7da;
+    color: #721c24;
+    opacity: 0;
+}
+
+button.btn-danger {
+    display: none;
+}
+
+.list-group-item:hover button {
+    display: block;
+}
+
+/* For showing tasks dynamically */
+.fadeIn {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
